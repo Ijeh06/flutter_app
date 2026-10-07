@@ -18,21 +18,64 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            //Good Morning Player
+            //Good Morning lad
             const Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: Text("Good Morning,"),
             ),
 
-            //Let's get a Card
+            // Let's get a card Today
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: Text(
-                "Order a fresh Player card Today.....",
+                "Order a fresh player card Today..",
                 style: GoogleFonts.notoSerif(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
+            ),
+
+            const SizedBox(height: 24),
+
+            //divider
+            const Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Divider(),
+            ),
+            //fres Cards + grid
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              child: Text(
+                "Fresh Card for Cheap Rate",
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
+
+            Expanded(
+              child: Consumer<CartModel>(
+                builder: (context, value, child) {
+                  return GridView.builder(
+                    itemCount: value.shopItems.length,
+                    padding: const EdgeInsets.all(12),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          childAspectRatio: 1 / 1.3,
+                        ),
+                    itemBuilder: (context, index) {
+                      //get individual item
+                      final item = value.shopItems[index];
+
+                      return PlayerItemTile(
+                        itemName: item.name,
+                        itemPrice: item.price,
+                        imagePath: item.imagePath,
+                        color: item.color,
+                      );
+                    },
+                  );
+                },
               ),
             ),
           ],
