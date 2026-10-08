@@ -23,10 +23,10 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             //Good Morning lad
-            const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Text("Good Morning,"),
-            ),
+            // const Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            //   child: Text("Good Morning,"),
+            // ),
 
             // Let's get a card Today
             Padding(
@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
             //divider
             const Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Divider(),
+              // child: Divider(),
             ),
             //fres Cards + grid
             const Padding(
