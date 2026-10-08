@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/player_item_tile.dart';
 import 'package:flutter_app/model/cart_model.dart';
+import 'package:flutter_app/pages/cart_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -10,11 +11,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: Colors.black,
-      //   child: const Icon(Icons.shopping_bag),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const CartPage()),
+        ),
+        backgroundColor: Colors.black,
+        child: const Icon(Icons.shopping_bag),
+      ),
       body: SafeArea(
         child: Column(
           children: [
