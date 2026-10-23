@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
 
             //divider
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
               // child: Divider(),
             ),
             //fres Cards + grid
