@@ -4,8 +4,7 @@ import 'package:flutter_app/pages/intro_page.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:provider/provider.dart';
 
-String publishable_key =
-    "pk_test_51UTbwDJ9eVuuObqrP9UX6n7dOfqf0uum7rF4ZwBi2SRVhNMMbV2U1nwneIYVnf3wG9EiKJHZ5gKbx4UEaH7vvey700JABXFtUV";
+String publishable_key = "";
 
 String secret_key = "";
 
